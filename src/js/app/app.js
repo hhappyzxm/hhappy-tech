@@ -45,7 +45,7 @@ define('app', ['angular', 'angular-bootstrap', 'angular-hljs'], function (angula
     /**
      * Directives Module
      */
-    angular.module('app.directives', ['app.config', 'app.directives.header', 'app.directives.footer', 'app.directives.sideMenu']);
+    angular.module('app.directives', ['app.config', 'app.directives.header', 'app.directives.footer', 'app.directives.sideMenu', 'app.directives.script']);
 
     /**
      * Header Directive
@@ -230,6 +230,24 @@ define('app', ['angular', 'angular-bootstrap', 'angular-hljs'], function (angula
                 '   </ul>\n' +
                 '</nav>'
             );
+        });
+
+    /**
+     * Load Script Directive
+     * */
+    angular.module('app.directives.script', [])
+        .directive('script', function() {
+            return {
+                restrict: 'E',
+                scope: false,
+                link: function(scope, element, attrs) {
+                    if (attrs.type === 'text/javascript-lazy') {
+                        var code = element.text();
+                        var fn = new Function(code);
+                        fn();
+                    }
+                }
+            };
         });
 
     /**

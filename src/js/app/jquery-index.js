@@ -1,4 +1,4 @@
-define('jquery-index', ['app', 'jquery'], function(app){
+define('jquery-index', ['app'], function(app){
     'use strict';
 
 

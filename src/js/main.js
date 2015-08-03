@@ -44,7 +44,9 @@
             'angular-hljs':[
                 'http://cdn.bootcss.com/angular-highlightjs/0.4.1/angular-highlightjs',
                 '../lib/angular-highlightjs/angular-highlightjs.min'
-            ]
+            ],
+            'jquery.ui.widget': ['../lib/jquery-file-upload/jquery.ui.widget'],
+            'jquery.file.upload': ['../lib/jquery-file-upload/jquery.fileupload']
         },
         shim: {
             angular: {
