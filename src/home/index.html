@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/site.css"/>
+</head>
+<body>
+<header-body></header-body>
+
+<div class="container" ng-controller="HomeCtrl">
+    <section>
+        <h1 class="page-header">Modules</h1>
+
+        <p class="text-muted">
+            <input class="form-control" autofocus="autofocus" style="max-width: 15em; display: inline-block;"
+                   ng-model="searchText" placeholder="search...">
+            {{(modules| filter:searchText).length}} modules found
+        </p>
+
+        <div class="list-group">
+            <div ng-repeat="module in modules| filter:searchText | orderBy: 'order'" class="list-group-item">
+                <p class="pull-right">
+                    <a ng-href="{{module.src}}" title="Home / Demo page"><i class="fa fa-3x fa-home"></i></a>
+                </p>
+                <h4 class="list-group-item-heading">{{module.name}}</h4>
+
+                <p class="list-group-item-text text-muted">{{module.desc}}</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer-body></footer-body>
+
+<script data-main="../js/main.js" src="../js/lib/requirejs/require.js"></script>
+</body>
+</html>

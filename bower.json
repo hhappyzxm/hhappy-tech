@@ -1,0 +1,41 @@
+{
+  "name": "hhappy-tech",
+  "version": "1.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.3",
+    "angular-bootstrap": "~0.13.1",
+    "font-awesome": "~4.3.0",
+    "requirejs": "~2.1.19",
+    "angular-highlightjs": "~0.4.3",
+    "highlightjs": "~8.6.0"
+  },
+  "exportsOverride": {
+    "jquery": {
+      "": "dist/*.*"
+    },
+    "bootstrap": {
+      "css": "dist/css/*.*",
+      "fonts": "dist/fonts/*.*",
+      "js": "dist/js/*.*"
+    },
+    "angular": {
+      "": "*.{js, css, gzip, map}"
+    },
+    "angular-bootstrap": {
+      "": "*.{js, css, gzip, map}"
+    },
+    "angular-highlightjs": {
+      "": "build/*.*"
+    }
+  }
+}

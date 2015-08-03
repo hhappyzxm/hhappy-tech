@@ -1,0 +1,232 @@
+/*
+    For Angular Bootstrap UI
+    Original Bootstrap's CSS depends on empty href attributes to style cursors for several components (pagination, tabs etc.).
+    But in AngularJS adding empty href attributes to link tags will cause unwanted route changes.
+    This is why we need to remove empty href attributes from directive templates and as a result styling is not applied correctly.
+*/
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+/*
+     ----------------------------------------------- header & nav -----------------------------------------------
+*/
+
+.bs-nav{
+    margin: 0;
+}
+
+.bs-header {
+    padding: 30px 15px 40px; /* side padding builds on .container 15px, so 30px */
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15);
+    color: #cdbfe3;
+    background-color: #563d7c;
+    background-image: url(../img/header.png);
+}
+
+.bs-header-no-margin-bottom{
+    margin-bottom: 0 !important;
+}
+
+.bs-header-margin-top{
+    margin-top: 50px;
+}
+
+.bs-header a {
+    color: #fff;
+    font-weight: normal;
+}
+
+.bs-header h1 {
+    color: #fff;
+}
+
+.bs-header p {
+    font-weight: 200;
+    line-height: 1.4;
+}
+
+.bs-header .container {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .bs-header {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .bs-header h1 {
+        font-size: 100px;
+        line-height: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .bs-header p {
+        margin-right: 25%;
+    }
+}
+
+.navbar-inner {
+    -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+}
+
+/*
+    Page footer
+*/
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+/*
+     ----------------------------------------------- callout -----------------------------------------------
+*/
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout > p,
+.bs-callout > ol,
+.bs-callout > ul {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 1em;
+}
+
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.bs-callout-danger {
+    border-left-color: #ce4844;
+}
+
+.bs-callout-danger h4 {
+    color: #ce4844;
+}
+
+.bs-callout-warning {
+    border-left-color: #aa6708;
+}
+
+.bs-callout-warning h4 {
+    color: #aa6708;
+}
+
+.bs-callout-info {
+    border-left-color: #1b809e;
+}
+
+.bs-callout-info h4 {
+    color: #1b809e;
+}
+
+/*
+     ----------------------------------------------- section -----------------------------------------------
+*/
+
+.bs-section {
+    margin-bottom: 60px;
+}
+
+.bs-section > p,
+.bs-section > ul,
+.bs-section > ol {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 1em;
+}
+
+/*
+     ----------------------------------------------- sidebar -----------------------------------------------
+*/
+
+.bs-sidenav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bs-sidebar .nav>.active:focus>a,
+.bs-sidebar .nav>.active:hover>a,
+.bs-sidebar .nav>.active>a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+.bs-sidebar .nav>li>a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+}
+
+.bs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.bs-sidebar .nav > li > a:focus,
+.bs-sidebar .nav > li > a:hover {
+    padding-left: 19px;
+    color: #563d7c;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #563d7c;
+}
+
+.bs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+}
+
+
+.bs-sidebar .nav .nav {
+    display: none;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .bs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .bs-sidebar .nav > .active > ul {
+        display: block;
+    }
+}
+
+/*
+     ----------------------------------------------- highlight -----------------------------------------------
+*/
+
+.highlight {
+}

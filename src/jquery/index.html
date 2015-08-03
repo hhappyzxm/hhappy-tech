@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/site.css"/>
+</head>
+<body>
+<header-body module-key="jquery">
+</header-body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="bs-section">
+                <h1 class="page-header" side-menu-level="1">jQuery</h1>
+
+                <div class="bs-callout bs-callout-info">
+                    <p>官网：<a href="http://jquery.com/" target="_blank">http://jquery.com/</a></p>
+                    <p>CDN：<a href="http://www.bootcdn.cn/jquery/" target="_blank">http://www.bootcdn.cn/jquery/</a></p>
+                    <p>Git Hub：<a href="https://github.com/jquery/jquery" target="_blank">https://github.com/jquery/jquery</a></p>
+                </div>
+
+                <p>通过 Bower 进行安装</p>
+
+                <div class="highlight" hljs source="'$ bower install jquery'" language="xml"></div>
+
+                <p>通过 NPM 进行安装</p>
+
+                <div class="highlight" hljs source="'$ npm install jquery'" language="xml"></div>
+            </div>
+            <div ng-include="'fileupload.html'"></div>
+        </div>
+        <div class="col-md-3">
+            <side-menu></side-menu>
+        </div>
+    </div>
+</div>
+
+<footer-body></footer-body>
+
+<script data-main="../js/main.js" src="../js/lib/requirejs/require.js"></script>
+</body>
+</html>
